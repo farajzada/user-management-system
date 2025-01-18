@@ -22,7 +22,8 @@ public class Main {
 
         System.out.println("All Products: " + productRepository.findAll());
 
-        Order order = new Order(1,3424);
+        Order order = new Order(1L,3424);
+        orderRepository.findById(2L);
         orderRepository.save(order);
         System.out.println("All Orders: " + orderRepository.findAll());
 

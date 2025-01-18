@@ -15,14 +15,25 @@ public class OrderRepository implements GenericRepository<Order> {
     private Long currentId = 1L;
 
     @Override
-    public Optional<Order> findById(Long id) {
-        for (Order order : orders) {
-            if (Objects.equals(order.getId(), id)) {
-                return Optional.of(order);
+    public Optional<Order> findById(Long id){{
+            try {
+                if (this.currentId != id)
+                throw new NotFound("The provided ID is null.");
+                else {
+                    for (Order order : orders) {
+                        if (Objects.equals(order.getId(), id)) {
+                            return Optional.of(order);
+                        }
+                    }
+                    return Optional.empty();
+                }
+
+            } catch (NotFound e) {
+                System.out.println(e.getMessage());
             }
+            return Optional.empty();
         }
-        return Optional.empty();
-    }
+        }
 
     @Override
     public List<Order> findAll() {

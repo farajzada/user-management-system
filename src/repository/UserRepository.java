@@ -49,7 +49,6 @@ public class UserRepository implements GenericRepository<User> {
             if (Objects.equals(user.getId(), id)) {
                 users.remove(user);
                 break;
-
             }
         }
     }
