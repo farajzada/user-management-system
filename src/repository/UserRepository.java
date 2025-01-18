@@ -1,4 +1,7 @@
 package repository;
 
-public class UserRepository {
+import model.User;
+
+public class UserRepository implements GenericRepository<User> {
+    
 }
