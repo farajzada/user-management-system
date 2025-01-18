@@ -1,4 +1,7 @@
 package repository;
 
-public class OrderRepository {
+import model.Order;
+
+public class OrderRepository implements GenericRepository<Order> {
+
 }

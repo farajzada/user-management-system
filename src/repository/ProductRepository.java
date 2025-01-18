@@ -1,4 +1,7 @@
 package repository;
 
-public class ProductRepository {
+import model.Product;
+
+public class ProductRepository implements GenericRepository<Product> {
+
 }
