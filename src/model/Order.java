@@ -1,7 +1,8 @@
 package model;
 
 import java.util.Objects;
-
+import java.util.ArrayList;
+import java.util.List;
 public class Order  extends BaseEntity{
     private long userId;
     private long pruductId;
@@ -11,20 +12,19 @@ public class Order  extends BaseEntity{
         this.pruductId = pruductId;
     }
 
-    public long getUserId() {
-        return userId;
-    }
-
-    public void setUserId(long userId) {
-        this.userId = userId;
-    }
-
     public long getPruductId() {
         return pruductId;
     }
 
     public void setPruductId(long pruductId) {
         this.pruductId = pruductId;
+    }
+    public long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
     @Override
@@ -46,4 +46,5 @@ public class Order  extends BaseEntity{
     public int hashCode() {
         return Objects.hash(userId, pruductId);
     }
+
 }
